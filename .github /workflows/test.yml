@@ -1,0 +1,16 @@
+long_running_job:
+  script:
+    - ./your-long-script.sh
+  timeout: 720h # 1 month
+
+
+image: ubuntu:18.04
+
+stages:
+  - build
+
+build_job:
+  stage: build
+  script:
+    - apt-get update
+    - apt-get install -y curl
